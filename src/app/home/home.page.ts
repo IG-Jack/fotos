@@ -15,6 +15,12 @@ export class HomePage {
   ngOnInit(): void {
     Camera.requestPermissions();
   } 
+
+  clearPhoto() {
+    this.imagenTomada = null;
+    this.imagenParaMostrar = "";
+  }
+
   async getPhoto() {
    this.imagenTomada = await Camera.getPhoto({
      quality: 90,
@@ -23,6 +29,7 @@ export class HomePage {
    });
    if(this.imagenTomada){
      this.imagenParaMostrar = this.imagenTomada
-   }
+   };
+
    
  }  }
