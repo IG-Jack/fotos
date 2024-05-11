@@ -1,27 +1,43 @@
-#container {
-  text-align: center;
+page-home {
+  .content {
+    --background: linear-gradient(to bottom, #ec7474, #ff8f8f); /* Fondo degradado */
+  }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+  ion-img {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+  .action-button {
+    margin: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #ff5050; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Añade bordes redondeados */
+    padding: 10px 20px; /* Añade relleno */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
 
-  color: #8c8c8c;
+  .action-button:hover {
+    background-color: #ff6666; /* Cambia el color de fondo al pasar el ratón */
+  }
 
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  .action-button ion-icon {
+    margin-right: 8px;
+  }
 }

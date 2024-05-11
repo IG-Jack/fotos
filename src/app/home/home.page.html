@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Galería
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content class="content">
+  <div class="gallery">
+    <ion-img [src]="imagenParaMostrar" *ngIf="imagenParaMostrar"></ion-img>
   </div>
+  <ion-button (click)="getPhoto()" expand="block" color="primary" class="action-button">
+    Tomar Foto
+  </ion-button>
+  <ion-button (click)="clearPhoto()" expand="block" color="danger" class="action-button" *ngIf="imagenParaMostrar">
+    Borrar Foto
+  </ion-button>
 </ion-content>
